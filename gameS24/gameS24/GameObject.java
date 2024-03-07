@@ -55,10 +55,13 @@ public class GameObject {
 	
 	public void update() {
 		this.setX(this.getX() + 3);
+		if(this.getX()>800) {
+			this.setX(-50);
+		}
 	}
 	
 	public void draw(Graphics g) {
 		g.setColor(this.getColor());
-		g.fillRect(this.getY(), this.getX(), this.getWidth(), this.getHeight());
+		g.fillRect(this.getX(), this.getY(), this.getWidth(), this.getHeight());
 	}
 }

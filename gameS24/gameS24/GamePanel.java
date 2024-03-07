@@ -8,6 +8,7 @@ import java.awt.Toolkit;
 import javax.swing.JPanel;
 
 public class GamePanel extends JPanel implements Runnable{
+	private static final long serialVersionUID = -3972033359713752978L;
 	private static double oneSecond = 1000000000;
 	private Dimension dim;
 	private Thread gameThread;
@@ -50,12 +51,13 @@ public class GamePanel extends JPanel implements Runnable{
 				repaint();
 				delta--;
 			}
+			
 		}
 		
 	}
 	
 	public void update() {
-		gameObject.update();
+		this.gameObject.update();
 	}
 	
 	@Override
